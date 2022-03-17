@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wall_roof.png-6102bfdadf524f4ceefd4455b1ad7cf8.stex"
+path="res://.import/wall_side.png-193304a9efdd979d035b8c53f692fe10.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://yt_breakout_assets/yt_assets/wall_roof.png"
-dest_files=[ "res://.import/wall_roof.png-6102bfdadf524f4ceefd4455b1ad7cf8.stex" ]
+source_file="res://assets/yt_assets/wall_side.png"
+dest_files=[ "res://.import/wall_side.png-193304a9efdd979d035b8c53f692fe10.stex" ]
 
 [params]
 
