@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://yt_breakout_assets/yt_assets/wall_roof.png" type="Texture" id=4]
+[ext_resource path="res://main.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 517.693, 5.12373 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Wall" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.0475464, 5.63565 )
+
+[node name="Wall2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1026.91, 0.047348 )
+
+[node name="Roof" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Roof"]
+
+[node name="Sprite" type="Sprite" parent="Roof/StaticBody2D"]
+position = Vector2( 510.31, -0.676666 )
+scale = Vector2( 1.42451, 0.434315 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roof/StaticBody2D"]
+position = Vector2( 511.565, 2.11893 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 513.912, 586.556 )
+
+[node name="Ball" parent="." instance=ExtResource( 3 )]
+position = Vector2( 185.963, 189.653 )

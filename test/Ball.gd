@@ -1,0 +1,19 @@
+extends Node2D
+
+var direction = Vector2.ZERO
+
+func _ready():
+	direction = Vector2(0,0)
+	
+func _physics_process(delta):
+	var collision=$Ball.move_and_collide(direction*delta)
+	if collision:
+		var reflect = collision.remainder.bounce(collision.normal)
+		direction = direction.bounce(collision.normal)
+		$Ball.move_and_collide(reflect)
+		direction *= 1.01
+
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	get_tree().reload_current_scene()
