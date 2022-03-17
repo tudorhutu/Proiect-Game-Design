@@ -12,6 +12,8 @@ func _physics_process(delta):
 		direction = direction.bounce(collision.normal)
 		$Ball.move_and_collide(reflect)
 		direction *= 1.01
+		if(collision.collider.name=='Brick'):
+			collision.collider.hit()
 
 
 

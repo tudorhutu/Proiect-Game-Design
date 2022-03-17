@@ -35,4 +35,4 @@ shape = SubResource( 1 )
 position = Vector2( 513.912, 586.556 )
 
 [node name="Ball" parent="." instance=ExtResource( 3 )]
-position = Vector2( 185.963, 189.653 )
+position = Vector2( 254.937, 439.386 )
