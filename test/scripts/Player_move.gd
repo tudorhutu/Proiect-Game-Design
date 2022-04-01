@@ -12,10 +12,8 @@ func get_input():
 	if Input.is_action_pressed('ui_left'):
 		velocity.x -= 1
 		speed = 500
-	if Input.is_action_pressed('ui_right') && Input.is_action_pressed('ui_shift'):
-		speed += 500
-	if Input.is_action_pressed('ui_left') && Input.is_action_pressed('ui_shift'):
-		speed += 500
+	if Input.is_action_pressed('ui_shift'):
+		speed += 900
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):

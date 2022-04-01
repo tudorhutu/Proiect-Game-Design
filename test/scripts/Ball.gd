@@ -12,7 +12,7 @@ func _physics_process(delta):
 		velocity = velocity.bounce(collision.normal)
 		$Ball.move_and_collide(reflect)
 		velocity *= 1.001
-		if(collision.collider.name=='Brick'):
+		if(collision.collider.name=='BrickBody'):
 			collision.collider.hit()
 		get_node('../Player/PlayerBody').position[1] = 0
 
