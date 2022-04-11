@@ -32,7 +32,7 @@ position = Vector2( 511.565, 2.11893 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 486, 590 )
+position = Vector2( 523.418, 591.782 )
 
 [node name="Ball" parent="." instance=ExtResource( 4 )]
 position = Vector2( 254.937, 439.386 )

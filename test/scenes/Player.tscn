@@ -7,11 +7,12 @@
 
 [node name="PlayerBody" type="KinematicBody2D" parent="."]
 scale = Vector2( 0.669, 0.844 )
+collision_mask = 3
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="PlayerBody"]
-position = Vector2( 16, 61 )
-scale = Vector2( 1.04718, 1.06958 )
+position = Vector2( 16, 61.914 )
+scale = Vector2( 1.04718, 1.08806 )
 polygon = PoolVector2Array( 84.0352, -81.3407, 107.909, -57.032, -137.512, -57.032, -107.909, -82.2756 )
 one_way_collision_margin = 0.0
 

@@ -1,6 +1,7 @@
 extends Node2D
 
-onready var br=preload("res://scenes/Brick.tscn")
+onready var basic_brick=preload("res://scenes/Brick.tscn")
+onready var powerup_brick=preload("res://scenes/PowerupBrick.tscn")
 var is_dragging = false
 var touchpos = Vector2.ZERO
 var start_clicked=0
@@ -9,19 +10,21 @@ func _ready():
 	set_bricks()
 	
 func set_bricks():
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	var colorNum = rng.randi_range(0, 1)
 	var numbricks=0
 	for i in range(5):
 		for j in range(13):
-			var brick=br.instance()
-			rng.randomize()
-#			colorNum = rng.randi_range(0, 1)
-#			brick.modulate = Color(colorNum, 0, 0)
-			brick.position=Vector2(100+70*j,70+50*i)
+			var random_generator = RandomNumberGenerator.new()
+			random_generator.randomize()
+			var random_value = random_generator.randf_range(1,10)
+			var basic_brick_instance=basic_brick.instance()
+			var powerup_brick_instance=powerup_brick.instance()
+			if int(random_value)!=3:
+				basic_brick_instance.position=Vector2(100+70*j,70+50*i)
+				add_child(basic_brick_instance)
+			else:
+				powerup_brick_instance.position=Vector2(100+70*j,70+50*i)
+				add_child(powerup_brick_instance)
 			numbricks+=1
-			add_child(brick)
 
 	
 func _input(event):
