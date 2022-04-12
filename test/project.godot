@@ -11,8 +11,18 @@ config_version=4
 [application]
 
 config/name="test"
-run/main_scene="res://scenes/Menu.tscn"
+run/main_scene="res://scenes/screens/Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+PlayerVariables="*res://scripts/PlayerVariables.gd"
+
+[display]
+
+window/size/height=650
+window/size/resizable=false
+window/size/borderless=true
 
 [input]
 
