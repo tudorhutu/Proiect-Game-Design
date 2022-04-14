@@ -25,6 +25,6 @@ one_way_collision_margin = 0.0
 position = Vector2( -131, 42 )
 scale = Vector2( 1.7125, 1.15 )
 texture = ExtResource( 1 )
-polygon = PoolVector2Array( 151.539, -36.9153, 0.906372, -36.6251, 19.2701, -60, 70.6569, -60, 136.924, -60.1299 )
+polygon = PoolVector2Array( 151.706, -36.6909, 0.906372, -36.6251, 19.619, -60.2765, 76.7094, -60.1234, 136.924, -60.1299 )
 
 [connection signal="ui_update" from="PlayerBody" to="." method="_on_PlayerBody_ui_update"]

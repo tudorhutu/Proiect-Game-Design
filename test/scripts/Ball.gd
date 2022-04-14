@@ -5,7 +5,6 @@ signal ui_update
 signal level_over 
 
 func _ready():
-	connect("ui_update",get_node('../Control'),"ui_update")
 	velocity = Vector2(0,0)
 	
 func CheckBricksLeft():
