@@ -17,7 +17,7 @@ script = ExtResource( 1 )
 position = Vector2( 0.0475464, 1.63565 )
 
 [node name="Wall2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1023.91, 0.047348 )
+position = Vector2( 1023.9, 0.047 )
 
 [node name="Roof" type="Node2D" parent="."]
 
