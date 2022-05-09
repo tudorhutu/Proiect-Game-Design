@@ -34,14 +34,18 @@ position = Vector2( 511.565, 2.11893 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.054902, 0.054902, 0.054902, 1 )
 position = Vector2( 523.418, 591.782 )
 
 [node name="Ball" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.054902, 0.054902, 0.054902, 1 )
 position = Vector2( 254.937, 439.386 )
 
 [node name="Lives_ui" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.054902, 0.054902, 0.054902, 1 )
 
 [node name="Bricks" type="Node2D" parent="."]
+modulate = Color( 0.054902, 0.054902, 0.054902, 1 )
 
 [node name="Node2D16" parent="Bricks" instance=ExtResource( 7 )]
 position = Vector2( 152, 87 )
