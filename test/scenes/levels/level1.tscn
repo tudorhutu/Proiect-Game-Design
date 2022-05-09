@@ -45,121 +45,121 @@ position = Vector2( 254.937, 439.386 )
 [node name="Bricks" type="Node2D" parent="."]
 
 [node name="Node2D" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 630, 173 )
+position = Vector2( 631, 128 )
 scale = Vector2( 2.426, 1 )
 
 [node name="Node2D2" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 596, 97 )
+position = Vector2( 597, 52 )
 
 [node name="Node2D3" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 542, 66 )
+position = Vector2( 543, 21 )
 
 [node name="Node2D4" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 629, 136 )
+position = Vector2( 630, 91 )
 
 [node name="Node2D5" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 388, 212 )
+position = Vector2( 389, 167 )
 
 [node name="Node2D15" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 388, 212 )
+position = Vector2( 389, 167 )
 
 [node name="Node2D6" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 389, 178 )
+position = Vector2( 390, 133 )
 
 [node name="Node2D7" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 417, 128 )
+position = Vector2( 418, 83 )
 
 [node name="Node2D8" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 434, 97 )
+position = Vector2( 435, 52 )
 
 [node name="Node2D9" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 631, 197 )
+position = Vector2( 632, 152 )
 scale = Vector2( 2.417, 1 )
 
 [node name="Node2D10" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 389, 236 )
+position = Vector2( 390, 191 )
 
 [node name="Node2D11" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 399, 152 )
+position = Vector2( 400, 107 )
 
 [node name="Node2D12" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 479, 66 )
+position = Vector2( 480, 21 )
 
 [node name="Node2D13" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 387, 286 )
+position = Vector2( 388, 241 )
 
 [node name="Node2D14" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 386, 260 )
+position = Vector2( 387, 215 )
 
 [node name="Node2D16" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 387, 315 )
+position = Vector2( 388, 270 )
 
 [node name="Node2D17" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 387, 342 )
+position = Vector2( 388, 297 )
 
 [node name="Node2D19" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 388, 375 )
+position = Vector2( 389, 330 )
 
 [node name="Node2D20" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 628, 229 )
+position = Vector2( 629, 184 )
 
 [node name="Node2D21" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 627, 254 )
+position = Vector2( 628, 209 )
 
 [node name="Node2D22" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 627, 281 )
+position = Vector2( 628, 236 )
 
 [node name="Node2D23" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 627, 307 )
+position = Vector2( 628, 262 )
 
 [node name="Node2D24" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 628, 339 )
+position = Vector2( 629, 294 )
 
 [node name="Node2D34" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 627, 436 )
+position = Vector2( 628, 391 )
 
 [node name="Node2D35" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 626, 467 )
+position = Vector2( 627, 422 )
 
 [node name="Node2D37" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 507, 405 )
+position = Vector2( 508, 360 )
 
 [node name="Node2D36" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 508, 442 )
+position = Vector2( 509, 397 )
 
 [node name="Node2D25" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 627, 370 )
+position = Vector2( 628, 325 )
 
 [node name="Node2D26" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 388, 407 )
+position = Vector2( 389, 362 )
 
 [node name="Node2D27" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 388, 442 )
+position = Vector2( 389, 397 )
 
 [node name="Node2D28" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 388, 475 )
+position = Vector2( 389, 430 )
 
 [node name="Node2D29" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 455, 499 )
+position = Vector2( 456, 454 )
 
 [node name="Node2D31" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 565, 498 )
+position = Vector2( 566, 453 )
 
 [node name="Node2D32" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 509, 474 )
+position = Vector2( 510, 429 )
 
 [node name="Node2D33" parent="Bricks" instance=ExtResource( 7 )]
-position = Vector2( 626, 401 )
+position = Vector2( 627, 356 )
 
 [node name="Node2D30" parent="Bricks" instance=ExtResource( 8 )]
-position = Vector2( 627, 496 )
+position = Vector2( 628, 451 )
 
 [node name="Node2D18" parent="Bricks" instance=ExtResource( 7 )]
 position = Vector2( 313, 274 )
 scale = Vector2( 1.5, 8 )
 
 [node name="Node2D" parent="." instance=ExtResource( 8 )]
-position = Vector2( 390, 501 )
+position = Vector2( 391, 456 )
 
 [connection signal="ui_update" from="Player" to="Lives_ui" method="_on_Player_ui_update"]
 [connection signal="ui_update" from="Ball" to="Lives_ui" method="_on_Ball_ui_update"]

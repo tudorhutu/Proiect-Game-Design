@@ -9,6 +9,7 @@ func _ready():
 	
 func CheckBricksLeft():
 	if PlayerVariables.bricksLeft==0:
+		PlayerVariables.balls += 1
 		emit_signal("level_over")
 		get_tree().change_scene("res://scenes/screens/WinScreen.tscn")
 	
