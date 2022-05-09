@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/Level0.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/Wall.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/screens/UiLivesLeft.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Lighting/background.png" type="Texture" id=7]
 [ext_resource path="res://scenes/bricks/Brick.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/bricks/LightPowerupBrick.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 517.693, 5.12373 )
@@ -61,6 +62,9 @@ margin_left = 11.0
 margin_top = 593.0
 margin_right = 11.0
 margin_bottom = 593.0
+
+[node name="Node2D2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 796.73, 521.842 )
 
 [connection signal="ui_update" from="Player" to="CanvasLayer2/Control" method="_on_Player_ui_update"]
 [connection signal="ui_update" from="Ball" to="CanvasLayer2/Control" method="_on_Ball_ui_update"]

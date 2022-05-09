@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/LifePowerup.gd" type="Script" id=1]
 [ext_resource path="res://assets/yt_assets/brick.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="OccluderPolygon2D" id=1]
+cull_mode = 1
+polygon = PoolVector2Array( 25, 10, -25, 10, -25, -10, 25, -10 )
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12.9254, 12.3936 )
 
 [node name="Node2D" type="Node2D"]
@@ -17,5 +21,10 @@ collision_mask = 0
 scale = Vector2( 0.477, 1 )
 texture = ExtResource( 2 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Powerup_body/Sprite"]
+light_mask = 5
+occluder = SubResource( 1 )
+light_mask = 5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Powerup_body"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )

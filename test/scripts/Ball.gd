@@ -17,6 +17,7 @@ func CheckBricksLeft():
 		get_tree().change_scene("res://scenes/screens/WinScreen.tscn")
 	
 func _physics_process(delta):
+	$BallBody/Light2D.texture_scale*=1.01
 	var collision=$BallBody.move_and_collide(velocity*delta)
 	if collision:
 		CheckBricksLeft()

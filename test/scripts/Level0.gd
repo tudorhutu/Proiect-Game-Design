@@ -24,7 +24,7 @@ func set_bricks():
 		for j in range(13): #13
 			var random_generator = RandomNumberGenerator.new()
 			random_generator.randomize()
-			var random_value = random_generator.randf_range(1,10)
+			var random_value = random_generator.randf_range(1,2)
 			var basic_brick_instance=basic_brick.instance()
 			var widen_powerup_brick_instance=widen_powerup_brick.instance()
 			var life_powerup_brick_instance=life_powerup_brick.instance()
@@ -35,6 +35,9 @@ func set_bricks():
 			elif int(random_value)==2:
 				life_powerup_brick_instance.position=Vector2(100+70*j,70+45*i)
 				add_child(life_powerup_brick_instance)
+			elif int(random_value)==3:
+				balls_brick_instance.position=Vector2(100+70*j,70+45*i)
+				add_child(balls_brick_instance)
 			else:
 				basic_brick_instance.position=Vector2(100+70*j,70+45*i)
 				add_child(basic_brick_instance)

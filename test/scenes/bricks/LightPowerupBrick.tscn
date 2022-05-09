@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/LightBrickBody.gd" type="Script" id=1]
+[ext_resource path="res://assets/yt_assets/brick.png" type="Texture" id=2]
+[ext_resource path="res://assets/Lighting/light.png" type="Texture" id=3]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+cull_mode = 1
+polygon = PoolVector2Array( 2.9039, -0.116499, -2.94094, -0.107853, -2.91824, -1.85443, 2.9039, -1.86308 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 23.9533, 9.41817 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BrickBody" type="StaticBody2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="BrickBody"]
+position = Vector2( -0.900677, -0.536484 )
+scale = Vector2( 0.962469, 0.956324 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="BrickBody/Sprite"]
+light_mask = 5
+position = Vector2( 1.04904e-05, 11.25 )
+scale = Vector2( 8.57292, 11.325 )
+occluder = SubResource( 1 )
+light_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BrickBody"]
+position = Vector2( -0.9533, -0.418175 )
+shape = SubResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -0.109337, -0.307533 )
+scale = Vector2( 0.569927, 0.625213 )
+texture = ExtResource( 3 )
+texture_scale = 0.25
+color = Color( 0.945098, 0.533333, 0.2, 1 )
+energy = 0.69
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( -0.109337, -0.307533 )
+scale = Vector2( 0.569927, 0.625213 )
+texture = ExtResource( 3 )
+texture_scale = 0.07
+color = Color( 0.87451, 0.756863, 0.407843, 1 )
+energy = 0.69
