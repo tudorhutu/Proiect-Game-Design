@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/MovingBrick.gd" type="Script" id=1]
 [ext_resource path="res://assets/yt_assets/brick.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=2]
+cull_mode = 1
+polygon = PoolVector2Array( 24, 9, -24, 9, -24, -10, 24, -10 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.9066, 9.83635 )
@@ -13,6 +17,11 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="BrickBody"]
 texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="BrickBody/Sprite"]
+light_mask = 5
+occluder = SubResource( 2 )
+light_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BrickBody"]
 shape = SubResource( 1 )

@@ -12,6 +12,7 @@ default_font = SubResource( 1 )
 
 [node name="PausePopup" type="Control"]
 pause_mode = 2
+light_mask = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )

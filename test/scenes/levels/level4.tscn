@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/yt_assets/wall_roof.png" type="Texture" id=1]
 [ext_resource path="res://scenes/gameplay/Ball.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/levels/Wall.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/screens/UiLivesLeft.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/Level1.gd" type="Script" id=6]
+[ext_resource path="res://assets/Lighting/background.png" type="Texture" id=7]
 [ext_resource path="res://scenes/bricks/Brick.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/bricks/LifePowerupBrick.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/bricks/WidenPowerupBrick.tscn" type="PackedScene" id=10]
@@ -268,6 +269,17 @@ rotation = -2.42426
 [node name="Node2D51" parent="Bricks" instance=ExtResource( 10 )]
 position = Vector2( 514, 101 )
 rotation = -1.5708
+
+[node name="Background" type="Sprite" parent="."]
+light_mask = 5
+position = Vector2( 566, 329 )
+scale = Vector2( 11.8359, 6.53125 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2( -2, -2 )
+color = Color( 0, 0, 0, 1 )
 
 [connection signal="ui_update" from="Player" to="Lives_ui" method="_on_Player_ui_update"]
 [connection signal="ui_update" from="Ball" to="Lives_ui" method="_on_Ball_ui_update"]

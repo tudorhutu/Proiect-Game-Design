@@ -13,7 +13,7 @@ func _ready():
 	PlayerVariables.balls_on_screen=0
 	PlayerVariables.balls=3
 	PlayerVariables.balls_on_screen=1
-	$Control/Label.text = str(PlayerVariables.balls)+"    X"
+	$CanvasLayer2/Control/Label.text = str(PlayerVariables.balls)+"    X"
 	set_bricks()
 	PlayerVariables.bricksLeft=numbricks
 	
@@ -25,7 +25,7 @@ func set_bricks():
 			var random_generator = RandomNumberGenerator.new()
 			random_generator.randomize()
 			var random_value = random_generator.randf_range(1,10)
-			var basic_brick_instance=balls_powerup_brick.instance()
+			var basic_brick_instance=basic_brick.instance()
 			var widen_powerup_brick_instance=widen_powerup_brick.instance()
 			var life_powerup_brick_instance=life_powerup_brick.instance()
 			var balls_brick_instance=balls_powerup_brick.instance()

@@ -21,7 +21,7 @@ func get_input():
 	velocity = velocity.normalized() * speed
 	if Input.is_action_pressed('ui_cancel'):
 		get_tree().paused = true
-		$PausePopup/Popup.show()
+		$CanvasLayer/PausePopup/Popup.show()
 func _physics_process(delta):
 	get_input()
 	var collision = move_and_collide(velocity * delta)
