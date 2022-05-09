@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+onready var new_ball=preload("res://scenes/gameplay/Ball.tscn")
 var speed = 500
 var velocity = Vector2()
 var width = scale.x
@@ -25,6 +25,8 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	var collision = move_and_collide(velocity * delta)
+	if collision:
+		position[1] = 0
 
 func widen():
 	if(t<0):
@@ -36,7 +38,6 @@ func widen():
 	if scale.x<width*1.5:
 		scale.x*=1.2
 		scale.y*=1.2
-	print(t)
 	while t>0:
 		yield(get_tree().create_timer(1), "timeout")
 		t-=1

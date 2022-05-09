@@ -29,7 +29,7 @@ scale = Vector2( 1.42451, 0.434315 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Roof/StaticBody2D"]
-position = Vector2( 511.565, 2.11893 )
+position = Vector2( 513.276, -0.830676 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]

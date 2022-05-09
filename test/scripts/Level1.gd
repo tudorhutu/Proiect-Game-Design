@@ -13,6 +13,7 @@ var numbricks
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	PlayerVariables.balls_on_screen=0
 	PlayerVariables.balls=3
 	#set_bricks()
 	count_brix()

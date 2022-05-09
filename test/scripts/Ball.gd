@@ -5,7 +5,10 @@ signal ui_update
 signal level_over 
 
 func _ready():
-	velocity = Vector2(0,0)
+	PlayerVariables.balls_on_screen+=1
+	if(PlayerVariables.startClicked==0):
+		velocity = Vector2(0,0)
+	print("instantiated:",PlayerVariables.balls_on_screen)
 	
 func CheckBricksLeft():
 	if PlayerVariables.bricksLeft==0:
@@ -14,27 +17,34 @@ func CheckBricksLeft():
 		get_tree().change_scene("res://scenes/screens/WinScreen.tscn")
 	
 func _physics_process(delta):
-	var collision=$Ball.move_and_collide(velocity*delta)
+	var collision=$BallBody.move_and_collide(velocity*delta)
 	if collision:
 		CheckBricksLeft()
 		var reflect = collision.remainder.bounce(collision.normal)
 		velocity = velocity.bounce(collision.normal)
-		$Ball.move_and_collide(reflect)
+		$BallBody.move_and_collide(reflect)
 		velocity *= 1.001
 		if(collision.collider.name=='BrickBody'):
 			collision.collider.hit()
-		get_node('../Player/PlayerBody').position[1] = 0
+		if(collision.collider.name=='SplitBrickBody'):
+			collision.collider.splithit(self)
+		
 
 func _on_VisibilityNotifier2D_screen_exited():
-	$Ball.position = Vector2.ZERO
-	velocity = Vector2.ZERO
-	if PlayerVariables.balls==0:
-		PlayerVariables.startClicked=0
-		emit_signal("ui_update")
-		get_tree().change_scene("res://scenes/screens/DeathScreen.tscn")
+	$BallBody.position = Vector2.ZERO
+	PlayerVariables.balls_on_screen-=1
+	if PlayerVariables.balls_on_screen<=0:
+		velocity = Vector2.ZERO
+		if PlayerVariables.balls==0:
+			PlayerVariables.startClicked=0
+			emit_signal("ui_update")
+			get_tree().change_scene("res://scenes/screens/DeathScreen.tscn")
+		else:
+			PlayerVariables.startClicked=0
+			PlayerVariables.balls-=1
+			emit_signal("ui_update")
 	else:
-		PlayerVariables.startClicked=0
-		PlayerVariables.balls-=1
-		emit_signal("ui_update")
+		queue_free()
+
 
 		

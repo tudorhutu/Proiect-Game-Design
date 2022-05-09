@@ -72,12 +72,10 @@ scale = Vector2( 0.7, 3 )
 [node name="Node2D58" parent="Bricks" instance=ExtResource( 10 )]
 position = Vector2( 564, 29 )
 rotation = -0.785398
-scale = Vector2( 1, 1 )
 
 [node name="Node2D59" parent="Bricks" instance=ExtResource( 10 )]
 position = Vector2( 452, 29 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 
 [node name="Node2D60" parent="Bricks" instance=ExtResource( 9 )]
 position = Vector2( 473, 283 )
@@ -250,17 +248,14 @@ scale = Vector2( 2.8, 1 )
 [node name="Node2D46" parent="Bricks" instance=ExtResource( 10 )]
 position = Vector2( 506, 52 )
 rotation = 3.14159
-scale = Vector2( 1, 1 )
 
 [node name="Node2D47" parent="Bricks" instance=ExtResource( 10 )]
 position = Vector2( 622, 43 )
 rotation = 3.14159
-scale = Vector2( 1, 1 )
 
 [node name="Node2D48" parent="Bricks" instance=ExtResource( 10 )]
 position = Vector2( 395, 41 )
 rotation = 3.14159
-scale = Vector2( 1, 1 )
 
 [node name="Node2D49" parent="Bricks" instance=ExtResource( 10 )]
 position = Vector2( 430, 79 )
@@ -273,7 +268,6 @@ rotation = -2.42426
 [node name="Node2D51" parent="Bricks" instance=ExtResource( 10 )]
 position = Vector2( 514, 101 )
 rotation = -1.5708
-scale = Vector2( 1, 1 )
 
 [connection signal="ui_update" from="Player" to="Lives_ui" method="_on_Player_ui_update"]
 [connection signal="ui_update" from="Ball" to="Lives_ui" method="_on_Ball_ui_update"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/BallsPowerup.gd" type="Script" id=1]
+[ext_resource path="res://assets/yt_assets/brick.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12.9254, 12.3936 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Powerup_body" type="KinematicBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="Powerup_body"]
+scale = Vector2( 0.477, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Powerup_body"]
+shape = SubResource( 1 )
