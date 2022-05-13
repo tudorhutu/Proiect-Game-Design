@@ -1,27 +1,34 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/LifePowerupBrick.gd" type="Script" id=1]
-[ext_resource path="res://assets/yt_assets/brick.png" type="Texture" id=2]
+[ext_resource path="res://assets/Bricks/wood_1.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.9066, 9.83635 )
 
 [sub_resource type="OccluderPolygon2D" id=2]
 cull_mode = 1
 polygon = PoolVector2Array( 24, 9, -24, 9, -24, -10, 24, -10 )
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.9066, 9.83635 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="BrickBody" type="StaticBody2D" parent="."]
 script = ExtResource( 1 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BrickBody"]
+position = Vector2( -2.27374e-13, 0 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
 [node name="Sprite" type="Sprite" parent="BrickBody"]
+self_modulate = Color( 0.34902, 1, 0.0862745, 1 )
+position = Vector2( 1.90735e-06, -0.5 )
+scale = Vector2( 0.390625, 0.148437 )
 texture = ExtResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="BrickBody/Sprite"]
 light_mask = 5
+position = Vector2( -1.28001, 6.73684 )
+scale = Vector2( 2.62, 6.68421 )
 occluder = SubResource( 2 )
 light_mask = 5
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BrickBody"]
-shape = SubResource( 1 )

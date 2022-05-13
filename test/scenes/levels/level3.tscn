@@ -38,10 +38,12 @@ position = Vector2( 511.565, 2.11893 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
+modulate = Color( 1, 0.729412, 0.729412, 1 )
+self_modulate = Color( 0.423529, 0.164706, 0.164706, 1 )
 position = Vector2( 523.418, 591.782 )
 
 [node name="Ball" parent="." instance=ExtResource( 2 )]
-position = Vector2( 523, 538 )
+position = Vector2( 522, 510 )
 
 [node name="Lives_ui" parent="." instance=ExtResource( 5 )]
 
@@ -165,7 +167,7 @@ position = Vector2( 730, 260 )
 
 [node name="Background" type="Sprite" parent="."]
 light_mask = 5
-position = Vector2( 566, 329 )
+position = Vector2( 567, 264 )
 scale = Vector2( 11.8359, 6.53125 )
 z_index = -1
 texture = ExtResource( 11 )

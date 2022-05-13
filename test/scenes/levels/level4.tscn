@@ -37,6 +37,8 @@ position = Vector2( 510, -1 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.298039, 0.286275, 0.203922, 1 )
+self_modulate = Color( 0.317647, 0.145098, 0.145098, 1 )
 position = Vector2( 523.418, 591.782 )
 
 [node name="Ball" parent="." instance=ExtResource( 2 )]
@@ -272,7 +274,7 @@ rotation = -1.5708
 
 [node name="Background" type="Sprite" parent="."]
 light_mask = 5
-position = Vector2( 566, 329 )
+position = Vector2( 580, 339 )
 scale = Vector2( 11.8359, 6.53125 )
 z_index = -1
 texture = ExtResource( 7 )

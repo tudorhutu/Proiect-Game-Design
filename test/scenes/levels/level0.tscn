@@ -8,7 +8,11 @@
 [ext_resource path="res://scenes/screens/UiLivesLeft.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Lighting/background.png" type="Texture" id=7]
 [ext_resource path="res://scenes/bricks/Brick.tscn" type="PackedScene" id=8]
+<<<<<<< Updated upstream
 [ext_resource path="res://scenes/bricks/LightPowerupBrick.tscn" type="PackedScene" id=9]
+=======
+[ext_resource path="res://scenes/bricks/LifePowerupBrick.tscn" type="PackedScene" id=9]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 517.693, 5.12373 )
@@ -21,6 +25,9 @@ position = Vector2( 0.0475464, 1.63565 )
 
 [node name="Wall2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1023.9, 0.047 )
+
+[node name="Node2D" parent="Wall2" instance=ExtResource( 9 )]
+position = Vector2( -829.9, 342.953 )
 
 [node name="Roof" type="Node2D" parent="."]
 
@@ -43,7 +50,7 @@ position = Vector2( 254.937, 439.386 )
 
 [node name="Background" type="Sprite" parent="."]
 light_mask = 5
-position = Vector2( 566, 329 )
+position = Vector2( 630, 288 )
 scale = Vector2( 11.8359, 6.53125 )
 z_index = -1
 texture = ExtResource( 7 )
