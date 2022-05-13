@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Level0.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/Wall.tscn" type="PackedScene" id=2]
@@ -7,12 +7,7 @@
 [ext_resource path="res://assets/yt_assets/wall_roof.png" type="Texture" id=5]
 [ext_resource path="res://scenes/screens/UiLivesLeft.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Lighting/background.png" type="Texture" id=7]
-[ext_resource path="res://scenes/bricks/Brick.tscn" type="PackedScene" id=8]
-<<<<<<< Updated upstream
 [ext_resource path="res://scenes/bricks/LightPowerupBrick.tscn" type="PackedScene" id=9]
-=======
-[ext_resource path="res://scenes/bricks/LifePowerupBrick.tscn" type="PackedScene" id=9]
->>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 517.693, 5.12373 )
@@ -25,9 +20,6 @@ position = Vector2( 0.0475464, 1.63565 )
 
 [node name="Wall2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1023.9, 0.047 )
-
-[node name="Node2D" parent="Wall2" instance=ExtResource( 9 )]
-position = Vector2( -829.9, 342.953 )
 
 [node name="Roof" type="Node2D" parent="."]
 
@@ -46,11 +38,11 @@ shape = SubResource( 1 )
 position = Vector2( 523.418, 591.782 )
 
 [node name="Ball" parent="." instance=ExtResource( 4 )]
-position = Vector2( 254.937, 439.386 )
+position = Vector2( 293.592, 424.804 )
 
 [node name="Background" type="Sprite" parent="."]
 light_mask = 5
-position = Vector2( 630, 288 )
+position = Vector2( 620.09, 348.534 )
 scale = Vector2( 11.8359, 6.53125 )
 z_index = -1
 texture = ExtResource( 7 )
@@ -58,9 +50,6 @@ texture = ExtResource( 7 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( -2, -2 )
 color = Color( 0, 0, 0, 1 )
-
-[node name="Node2D" parent="." instance=ExtResource( 8 )]
-position = Vector2( 274, 319 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -70,8 +59,8 @@ margin_top = 593.0
 margin_right = 11.0
 margin_bottom = 593.0
 
-[node name="Node2D2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 796.73, 521.842 )
+[node name="Node2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 744.868, 496.352 )
 
 [connection signal="ui_update" from="Player" to="CanvasLayer2/Control" method="_on_Player_ui_update"]
 [connection signal="ui_update" from="Ball" to="CanvasLayer2/Control" method="_on_Ball_ui_update"]

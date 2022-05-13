@@ -24,7 +24,7 @@ func set_bricks():
 		for j in range(13): #13
 			var random_generator = RandomNumberGenerator.new()
 			random_generator.randomize()
-			var random_value = random_generator.randf_range(1,2)
+			var random_value = random_generator.randf_range(1,10)
 			var basic_brick_instance=basic_brick.instance()
 			var widen_powerup_brick_instance=widen_powerup_brick.instance()
 			var life_powerup_brick_instance=life_powerup_brick.instance()
