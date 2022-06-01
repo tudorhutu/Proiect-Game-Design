@@ -281,7 +281,7 @@ texture = ExtResource( 7 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( -2, -2 )
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.466667, 0.360784, 0.223529, 1 )
 
 [connection signal="ui_update" from="Player" to="Lives_ui" method="_on_Player_ui_update"]
 [connection signal="ui_update" from="Ball" to="Lives_ui" method="_on_Ball_ui_update"]

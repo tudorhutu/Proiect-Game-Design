@@ -49,7 +49,7 @@ texture = ExtResource( 7 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( -2, -2 )
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.466667, 0.360784, 0.223529, 1 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
