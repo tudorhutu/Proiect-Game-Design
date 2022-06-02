@@ -42,7 +42,7 @@ margin_right = 286.0
 margin_bottom = 46.0
 text = "Continue"
 
-[node name="OtionsButton" type="Button" parent="Popup/VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="Popup/VBoxContainer"]
 margin_top = 50.0
 margin_right = 286.0
 margin_bottom = 96.0

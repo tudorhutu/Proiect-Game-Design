@@ -14,3 +14,7 @@ func _on_QuitButton_pressed():
 
 func _on_LevelSelect_pressed():
 	get_tree().change_scene("res://scenes/screens/LevelSelect.tscn") 
+
+
+func _on_OptionsButton_pressed():
+	get_tree().change_scene("res://scenes/screens/Options.tscn")

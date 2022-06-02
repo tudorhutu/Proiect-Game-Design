@@ -41,7 +41,7 @@ scale = Vector2( 8.16773, 8.03261 )
 texture = ExtResource( 4 )
 
 [node name="Light2D2" type="Light2D" parent="BallBody"]
-position = Vector2( 0.125003, 3.33786e-06 )
+position = Vector2( 0, 1 )
 scale = Vector2( 0.0463867, 0.046875 )
 texture = ExtResource( 3 )
 texture_scale = 10.88
@@ -76,13 +76,20 @@ position = Vector2( -2.69434, 0.000488281 )
 scale = Vector2( 8.16773, 8.03261 )
 texture = ExtResource( 4 )
 
-[node name="PaddleHitAudio" type="AudioStreamPlayer2D" parent="."]
+[node name="PaddleHitAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = -0.874
+mix_target = 2
+bus = "Sound Effects"
 
-[node name="BrickHitAudio" type="AudioStreamPlayer2D" parent="."]
+[node name="BrickHitAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+mix_target = 2
+bus = "Sound Effects"
 
-[node name="WallHitAudio" type="AudioStreamPlayer2D" parent="."]
+[node name="WallHitAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+mix_target = 2
+bus = "Sound Effects"
 
 [connection signal="screen_exited" from="BallBody/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
