@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Fonts/StayPixelRegular-EaOxl.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=2]
+[ext_resource path="res://assets/Background/main_menu.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -21,33 +22,48 @@ script = ExtResource( 2 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 64.0
-margin_top = -225.0
+margin_left = 43.0
+margin_top = -256.0
 margin_right = 266.0
-margin_bottom = -70.0
+margin_bottom = -12.0
 theme = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
-margin_right = 202.0
+margin_right = 223.0
 margin_bottom = 57.0
 focus_neighbour_top = NodePath("../QuitButton")
 text = "Start"
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="LevelSelect" type="Button" parent="VBoxContainer"]
 margin_top = 61.0
-margin_right = 202.0
+margin_right = 223.0
 margin_bottom = 118.0
+focus_neighbour_top = NodePath("../QuitButton")
+text = "Level select"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+margin_top = 122.0
+margin_right = 223.0
+margin_bottom = 179.0
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 122.0
-margin_right = 202.0
-margin_bottom = 179.0
+margin_top = 183.0
+margin_right = 223.0
+margin_bottom = 240.0
 focus_neighbour_bottom = NodePath("../StartButton")
 text = "Quit"
 
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 528.922, 348.768 )
+scale = Vector2( 0.555528, 0.646392 )
+z_index = -1
+texture = ExtResource( 3 )
+
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelSelect" to="." method="_on_LevelSelect_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelSelect" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

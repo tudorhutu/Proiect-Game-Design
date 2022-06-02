@@ -5,8 +5,12 @@ func _ready():
 
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://scenes/levels/level0.tscn")
+	get_tree().change_scene("res://scenes/levels/level1.tscn")
 
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
+
+
+func _on_LevelSelect_pressed():
+	get_tree().change_scene("res://scenes/screens/LevelSelect.tscn") 

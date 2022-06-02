@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/screens/PausePopUp.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Lighting/spot.png" type="Texture" id=5]
 
-[sub_resource type="StreamTexture" id=2]
+[sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/wood_5.png-738605263e4fc6eebe41ccc00480a1f8.stex"
 
@@ -29,7 +29,7 @@ position = Vector2( -523.169, 213.27 )
 scale = Vector2( 1.7125, 1.15 )
 offset = Vector2( 229.004, -148.931 )
 antialiased = true
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 texture_scale = Vector2( 0.8, 0.8 )
 texture_rotation_degrees = 112.3
 invert_border = 0.1
@@ -46,7 +46,7 @@ scale = Vector2( 0.0334564, 0.0267561 )
 texture = ExtResource( 1 )
 texture_scale = 14.66
 color = Color( 0.737255, 0.431373, 0.101961, 1 )
-energy = 0.31
+energy = 1.24
 shadow_enabled = true
 shadow_color = Color( 0.356863, 0.0313726, 0.0313726, 0 )
 shadow_gradient_length = 1.3

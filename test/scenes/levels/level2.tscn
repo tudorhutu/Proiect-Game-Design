@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/screens/UiLivesLeft.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/Level1.gd" type="Script" id=6]
 [ext_resource path="res://scenes/bricks/MovingBrick.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Lighting/background.png" type="Texture" id=8]
+[ext_resource path="res://assets/Background/wallpapersden.com_forest-minimal-mountain-landscape_3840x2160.jpg" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 517.693, 5.12373 )
@@ -23,14 +23,14 @@ position = Vector2( 1023.9, 0.047 )
 
 [node name="Roof" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Roof"]
+[node name="RoofBody" type="StaticBody2D" parent="Roof"]
 
-[node name="Sprite" type="Sprite" parent="Roof/StaticBody2D"]
+[node name="Sprite" type="Sprite" parent="Roof/RoofBody"]
 position = Vector2( 510.31, -0.676666 )
 scale = Vector2( 1.42451, 0.434315 )
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Roof/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roof/RoofBody"]
 position = Vector2( 511.565, 2.11893 )
 shape = SubResource( 1 )
 
@@ -126,8 +126,8 @@ rotation = 3.14159
 
 [node name="Background" type="Sprite" parent="."]
 light_mask = 5
-position = Vector2( 566, 329 )
-scale = Vector2( 11.8359, 6.53125 )
+position = Vector2( 511.263, 329.403 )
+scale = Vector2( 0.264877, 0.303691 )
 z_index = -1
 texture = ExtResource( 8 )
 

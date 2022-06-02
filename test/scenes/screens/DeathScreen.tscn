@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Fonts/StayPixelRegular-EaOxl.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/DeathScreen.gd" type="Script" id=2]
 [ext_resource path="res://assets/Fonts/PEPSI_pl.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Background/3048402.jpg" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -22,6 +23,9 @@ light_mask = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -68,6 +72,12 @@ margin_bottom = 44.102
 custom_fonts/font = SubResource( 3 )
 text = "Game over"
 align = 1
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 511.768, 326.001 )
+scale = Vector2( 0.310373, 0.263388 )
+z_index = -1
+texture = ExtResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/ReplayButton" to="." method="_on_ReplayButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]

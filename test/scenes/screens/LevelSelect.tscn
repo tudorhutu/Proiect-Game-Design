@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Fonts/PEPSI_pl.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+extra_spacing_top = 12
+extra_spacing_bottom = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Level Select" type="Control"]
+light_mask = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.5909
+margin_top = 513.877
+margin_right = -185.409
+margin_bottom = 11.8771
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -95.0
+margin_right = 703.0
+margin_bottom = -34.0
+theme = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="VBoxContainer"]
+margin_right = 193.0
+margin_bottom = 61.0
+focus_neighbour_top = NodePath("../QuitButton")
+text = "Main menu"
+
+[node name="Level 1" type="Button" parent="VBoxContainer"]
+margin_left = 197.0
+margin_right = 342.0
+margin_bottom = 61.0
+focus_neighbour_top = NodePath("../QuitButton")
+text = "Level 1"
+
+[node name="Level 2" type="Button" parent="VBoxContainer"]
+margin_left = 346.0
+margin_right = 507.0
+margin_bottom = 61.0
+text = "Level 2"
+
+[node name="Level 3" type="Button" parent="VBoxContainer"]
+margin_left = 511.0
+margin_right = 670.0
+margin_bottom = 61.0
+focus_neighbour_bottom = NodePath("../StartButton")
+text = "Level 3"
+
+[node name="Level 4" type="Button" parent="VBoxContainer"]
+margin_left = 674.0
+margin_right = 835.0
+margin_bottom = 61.0
+focus_neighbour_bottom = NodePath("../StartButton")
+text = "Level 4"
+
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_Level_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level 1" to="." method="_on_Level_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level 2" to="." method="_on_Level_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level 3" to="." method="_on_Level_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level 4" to="." method="_on_Level_4_pressed"]

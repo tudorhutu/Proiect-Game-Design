@@ -15,9 +15,18 @@ var numbricks
 func _ready():
 	PlayerVariables.balls_on_screen=0
 	PlayerVariables.balls=3
-	#set_bricks()
+	var context = get_tree().current_scene.filename
+	PlayerVariables.current_level=int(context[-6])
 	count_brix()
 	PlayerVariables.bricksLeft=numbricks
+	
+	var music = AudioStreamPlayer.new()
+	add_child(music)
+	var stream = load("res://assets/Ambience/ambience.mp3")
+	music.set_stream(stream)
+	music.volume_db = -2
+	music.pitch_scale = 1
+	music.play()
 
 func count_brix():
 	numbricks = $Bricks.get_child_count()
