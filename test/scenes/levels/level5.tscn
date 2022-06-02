@@ -358,8 +358,8 @@ position = Vector2( 510, 310 )
 
 [node name="Background" type="Sprite" parent="."]
 light_mask = 5
-position = Vector2( 510, 329 )
-scale = Vector2( 0.264466, 0.3041 )
+position = Vector2( 511, 329 )
+scale = Vector2( 0.268112, 0.3041 )
 z_index = -7
 texture = ExtResource( 7 )
 

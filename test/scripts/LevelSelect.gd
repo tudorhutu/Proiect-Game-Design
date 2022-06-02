@@ -19,3 +19,7 @@ func _on_Level_4_pressed():
 
 func _on_Menu_pressed():
 	get_tree().change_scene("res://scenes/screens/Menu.tscn")
+
+
+func _on_Level_5_pressed():
+	get_tree().change_scene("res://scenes/levels/level5.tscn")

@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Fonts/PEPSI_pl.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
+[ext_resource path="res://assets/Background/main_menu.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
-extra_spacing_top = 12
+size = 29
+extra_spacing_top = 18
 extra_spacing_bottom = 12
 font_data = ExtResource( 1 )
 
@@ -28,51 +29,64 @@ __meta__ = {
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 64.0
-margin_top = -95.0
-margin_right = 703.0
-margin_bottom = -34.0
+margin_left = 39.0
+margin_top = -95.0001
+margin_right = 980.0
+margin_bottom = -30.0001
 theme = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Menu" type="Button" parent="VBoxContainer"]
-margin_right = 193.0
-margin_bottom = 61.0
+margin_right = 104.0
+margin_bottom = 65.0
 focus_neighbour_top = NodePath("../QuitButton")
-text = "Main menu"
+text = " Menu"
 
 [node name="Level 1" type="Button" parent="VBoxContainer"]
-margin_left = 197.0
-margin_right = 342.0
-margin_bottom = 61.0
+margin_left = 108.0
+margin_right = 242.0
+margin_bottom = 65.0
 focus_neighbour_top = NodePath("../QuitButton")
 text = "Level 1"
 
 [node name="Level 2" type="Button" parent="VBoxContainer"]
-margin_left = 346.0
-margin_right = 507.0
-margin_bottom = 61.0
+margin_left = 246.0
+margin_right = 394.0
+margin_bottom = 65.0
 text = "Level 2"
 
 [node name="Level 3" type="Button" parent="VBoxContainer"]
-margin_left = 511.0
-margin_right = 670.0
-margin_bottom = 61.0
+margin_left = 398.0
+margin_right = 546.0
+margin_bottom = 65.0
 focus_neighbour_bottom = NodePath("../StartButton")
 text = "Level 3"
 
 [node name="Level 4" type="Button" parent="VBoxContainer"]
-margin_left = 674.0
-margin_right = 835.0
-margin_bottom = 61.0
+margin_left = 550.0
+margin_right = 699.0
+margin_bottom = 65.0
 focus_neighbour_bottom = NodePath("../StartButton")
 text = "Level 4"
 
-[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_Level_1_pressed"]
+[node name="Level 5" type="Button" parent="VBoxContainer"]
+margin_left = 703.0
+margin_right = 851.0
+margin_bottom = 65.0
+focus_neighbour_bottom = NodePath("../StartButton")
+text = "Level 5"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 490.011, -158.714 )
+scale = Vector2( 0.559531, 0.656922 )
+z_index = -1
+texture = ExtResource( 3 )
+
 [connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_Menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level 1" to="." method="_on_Level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level 2" to="." method="_on_Level_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level 3" to="." method="_on_Level_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level 4" to="." method="_on_Level_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level 5" to="." method="_on_Level_5_pressed"]

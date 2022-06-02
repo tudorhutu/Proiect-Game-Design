@@ -16,6 +16,9 @@ light_mask = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Popup" type="Popup" parent="."]
 pause_mode = 2
@@ -42,22 +45,16 @@ margin_right = 286.0
 margin_bottom = 46.0
 text = "Continue"
 
-[node name="OptionsButton" type="Button" parent="Popup/VBoxContainer"]
+[node name="MenuButton" type="Button" parent="Popup/VBoxContainer"]
 margin_top = 50.0
 margin_right = 286.0
 margin_bottom = 96.0
-text = "Options"
-
-[node name="MenuButton" type="Button" parent="Popup/VBoxContainer"]
-margin_top = 100.0
-margin_right = 286.0
-margin_bottom = 146.0
 text = "Main Menu"
 
 [node name="QuitButton" type="Button" parent="Popup/VBoxContainer"]
-margin_top = 150.0
+margin_top = 100.0
 margin_right = 286.0
-margin_bottom = 196.0
+margin_bottom = 146.0
 text = "Quit"
 
 [connection signal="pressed" from="Popup/VBoxContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
